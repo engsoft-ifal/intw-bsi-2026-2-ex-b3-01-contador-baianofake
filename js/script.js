@@ -8,3 +8,25 @@
 //       elemento.textContent = valor.
 
 // escreva seu código aqui
+// 1. Selecionar os elementos
+const total = document.querySelector("#total");
+const botaoSomar = document.querySelector("#somar");
+const botaoZerar = document.querySelector("#zerar");
+
+// Variável que guarda o valor do contador
+let contador = 0;
+
+// 2. Ao carregar, #total mostra 0
+total.textContent = contador;
+
+// 3. Clicar em Somar aumenta 1 e atualiza o #total
+botaoSomar.addEventListener("click", () => {
+  contador++;
+  total.textContent = contador;
+});
+
+// 4. Clicar em Zerar volta para 0
+botaoZerar.addEventListener("click", () => {
+  contador = 0;
+  total.textContent = contador;
+});
